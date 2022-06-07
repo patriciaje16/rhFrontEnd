@@ -2,14 +2,22 @@ import "./Housewife.scss";
 
 import React from 'react'
 
-const Housewife = () => {
+const Housewife = (props) => {
+  const {
+    name,
+    placeOfResidence,
+    seasonsPresent,
+    currentRelationshipStatus,
+    famousQuote
+  } = props.housewife;
+
   return (
     <div className="housewife">
-      <h3>{housewife}</h3>
-      <p>Country of residence:         {originCountry} </p>
-      <p>Seasons appeard: {}</p>
-      <p>Current relationship status: {relationship}</p>
-      <p>Famous quote(s): {quotes}</p>
+      <h3>{name}</h3>
+      <p>Country of residence:         {placeOfResidence} </p>
+      <p>Seasons appeared: {seasonsPresent}</p>
+      <p>Current relationship status: {currentRelationshipStatus}</p>
+      <p>Famous quote(s): {famousQuote}</p>
 
 
     </div>

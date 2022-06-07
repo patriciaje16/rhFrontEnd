@@ -1,17 +1,43 @@
 import "./Form.scss";
+import { useState } from "react";
 
 import React from 'react'
 
 const Form = () => {
+const [housewife, setHousewife] = useState({
+  name: "",
+  placeOfResidence:"",
+  seasonsPresent: "",
+  currentRelationshipStatus:"",
+  famousQuote:""
+})
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  fetch('http://localhost:8081/housewife', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(housewife)
+  })
+  .then((response) => response.json())
+    .then((json => console.log(json)))
+    .catch(err => console.log(err))
+    e.target.reset();
+}
+
+
+
   return (
     <div className="form-container">
       <h2>Add To The RealHousewives List</h2>
-      <form>
-        <input type="text" placeholder="RealHousewife Name"/>
-        <input type="text" placeholder="origin country"/>
-        <input type="text" placeholder="seasons active"/>
-        <input type="text" placeholder="current relationship status"/>
-        <input type="text" placeholder="famous quote"/>
+      <form onSubmit = {handleSubmit}>
+        <input type="text" placeholder="Real housewife name" onInput={(e) => setHousewife({ ...housewife, name: e.target.value})}/>
+        <input type="text" placeholder="Place of residence"onInput={(e) => setHousewife({ ...housewife, placeOfResidence: e.target.value})}/>
+        <input type="text" placeholder="seasons active" onInput={(e) => setHousewife({ ...housewife, seasonsPresent: e.target.value})}/>
+        <input type="text" placeholder="current relationship status" onInput={(e) => setHousewife({ ...housewife, currentRelationshipStatus: e.target.value})}/>
+        <input type="text" placeholder="famous quote" onInput={(e) => setHousewife({ ...housewife, famousQuote: e.target.value})}/>
         <button type="submit" className="button">Submit</button>
       </form>
     </div>

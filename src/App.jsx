@@ -1,5 +1,6 @@
 import React from 'react'
 import Dashboard from './containers/Dashboard/Dashboard'
+import "./App.scss"
 
 const App = () => {
   

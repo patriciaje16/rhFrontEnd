@@ -38,7 +38,7 @@ const handleSubmit = (e) => {
         <input type="text" placeholder="seasons active" onInput={(e) => setHousewife({ ...housewife, seasonsPresent: e.target.value})}/>
         <input type="text" placeholder="current relationship status" onInput={(e) => setHousewife({ ...housewife, currentRelationshipStatus: e.target.value})}/>
         <input type="text" placeholder="famous quote" onInput={(e) => setHousewife({ ...housewife, famousQuote: e.target.value})}/>
-        <button type="submit" className="button">Submit</button>
+        <button type="submit" className="btn">Submit</button>
       </form>
     </div>
   )

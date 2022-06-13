@@ -14,7 +14,7 @@ const [housewife, setHousewife] = useState({
 
 const handleSubmit = (e) => {
   e.preventDefault()
-  fetch('http://localhost:8081/housewife', {
+  fetch('https://rhbackend-wxudo37tma-nw.a.run.app/housewife', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -30,6 +30,7 @@ const handleSubmit = (e) => {
 
 
   return (
+    <div className="background">
     <div className="form-container">
       <h2>Add To The RealHousewives List</h2>
       <form onSubmit = {handleSubmit}>
@@ -40,6 +41,7 @@ const handleSubmit = (e) => {
         <input type="text" placeholder="famous quote" onInput={(e) => setHousewife({ ...housewife, famousQuote: e.target.value})}/>
         <button type="submit" className="btn">Submit</button>
       </form>
+    </div>
     </div>
   )
 }

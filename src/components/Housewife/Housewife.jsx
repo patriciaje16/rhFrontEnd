@@ -8,16 +8,41 @@ const Housewife = (props) => {
     placeOfResidence,
     seasonsPresent,
     currentRelationshipStatus,
-    famousQuote
+    famousQuote,
+    housewifeId
+    
+    
+  
+    
   } = props.housewife;
+
+  const handleDelete = () => {
+    console.log("it works")
+    fetch(
+      'https://rhbackend-wxudo37tma-nw.a.run.app/housewife' + housewifeId,
+      {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((json) => console.log(json))
+      .catch((err) => console.log(err));
+    console.log('deleted');
+  };
+
+
 
   return (
     <div className="housewife">
-      <h3>{name}</h3>
-      <p>Country of residence:         {placeOfResidence} </p>
-      <p>Seasons appeared: {seasonsPresent}</p>
-      <p>Current relationship status: {currentRelationshipStatus}</p>
-      <p>Famous quote(s): {famousQuote}</p>
+      <h3 className="housewife__name">{name}</h3>
+      <p className="housewife__country">Country of residence:         {placeOfResidence} </p>
+      <p className="housewife__season" >Seasons appeared: {seasonsPresent}</p>
+      <p className="housewife__relationship">Current relationship status: {currentRelationshipStatus}</p>
+      <p className="housewife__quote">Famous quote(s): {famousQuote}</p>
+      <button type="button" className="btn" onClick={handleDelete}>Delete</button>
 
 
     </div>

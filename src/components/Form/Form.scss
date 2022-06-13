@@ -3,7 +3,7 @@ $blue: rgb(40, 135, 199);
 
 
 .form-container {
-  width: 40%;
+  width: 50%;
   min-width: 320px;
   max-width: 475px;
   background: #fff;
@@ -26,16 +26,15 @@ $blue: rgb(40, 135, 199);
     width: 100%;
     text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
-    box-shadow:inset 0px 1px 1px fadeout(white, 95%);
+    // box-shadow:inset 0px 1px 1px fadeout(white, 95%);
     border: 1px solid darken(grey, 5%);
     margin: 0;
     font-weight: 200;
   }
   
   input {
-    display: block;
-    margin: auto auto;
-    width: 100%;
+     display: block;
+    width: 80%;
     margin-bottom: 2em;
     padding: .5em 0;
     border: none;

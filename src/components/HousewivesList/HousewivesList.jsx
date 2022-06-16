@@ -10,7 +10,8 @@ const HousewivesList = (props) => {
 
   return (
     <div className="list">
-      <h2 className="housewives__header">Past and Current Real Housewives</h2>
+      <h2 className="housewives__header">The Realest Housewives</h2>
+      
       <div className="housewives__container">
       {props.housewives && props.housewives.map(housewife => <Housewife key={housewife.id} housewife={housewife} />)}
       </div>

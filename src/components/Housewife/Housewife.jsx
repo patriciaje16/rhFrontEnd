@@ -10,16 +10,16 @@ const Housewife = (props) => {
     currentRelationshipStatus,
     famousQuote,
     housewifeId
-    
-    
-  
-    
+
+
+
+
   } = props.housewife;
 
   const handleDelete = () => {
     console.log("it works")
     fetch(
-      'https://rhbackend-wxudo37tma-nw.a.run.app/housewife' + housewifeId,
+      'https://rhbackend-wxudo37tma-nw.a.run.app/housewife/' + housewifeId,
       {
         method: 'DELETE',
         headers: {

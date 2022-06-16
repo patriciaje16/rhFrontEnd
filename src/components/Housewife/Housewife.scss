@@ -24,6 +24,7 @@ $blue-two: rgb(40, 135, 199);
     background: $blue-two;
     border: 1px solid darken($blue-two, 5%);
     padding: .5em 2em;
+    margin-top: 1rem;
     color: white;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
     &:hover {

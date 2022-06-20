@@ -30,6 +30,8 @@ const Housewife = (props) => {
     console.log('deleted');
   };
 
+  
+
 
 
   return (

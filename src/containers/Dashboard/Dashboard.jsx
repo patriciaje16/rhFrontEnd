@@ -13,7 +13,7 @@ const Dashboard = () => {
 const [housewives, setHousewives] = useState([]);
 
 const getHousewives = () => {
-  fetch("http://localhost:8081/housewives")
+  fetch("https://rhbackend-wxudo37tma-nw.a.run.app/housewives")
   .then(res => res.json())
   .then(json => setHousewives(json))
   .catch(err => console.log(err))

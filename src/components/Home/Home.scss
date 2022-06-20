@@ -2,30 +2,39 @@
 
 
 .background {
-  height: 100vh;
-  width: 100%;
-  background: url("../../assets/images/diamond.png");
-  background-size: 10rem 10rem;
-  background-repeat: repeat;
+   height: 100vh;
+   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1300' height='700' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1372%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='url(%23SvgjsLinearGradient1373)'%3e%3c/rect%3e%3cpath d='M454.6 622.44C543.36 619.84 519.5 493.71 783.12 487.4 1046.74 481.09 1265.26 250.35 1440.16 246.6' stroke='rgba(124%2c 139%2c 93%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M776.29 634.97C912.16 588.39 911.48 219.63 1137.72 188.37 1363.96 157.11 1404.56 77.64 1499.15 76.37' stroke='rgba(124%2c 139%2c 93%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M545.17 623.8C726.86 590.61 817.1 136.13 1099.28 135.15 1381.46 134.17 1498.98 402.17 1653.39 409.55' stroke='rgba(124%2c 139%2c 93%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M672.96 650.41C759.58 643.32 722.75 479.34 969.09 468.34 1215.42 457.34 1401.05 226.79 1561.34 221.94' stroke='rgba(124%2c 139%2c 93%2c 1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M35.1 628.99C181.05 609.61 259.05 276.18 504.25 273.03 749.46 269.88 738.83 343.03 973.41 343.03 1207.98 343.03 1323.97 273.22 1442.56 273.03' stroke='rgba(124%2c 139%2c 93%2c 1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1372'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='15.28%25' y1='139.29%25' x2='84.72%25' y2='-39.29%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1373'%3e%3cstop stop-color='rgba(147%2c 112%2c 96%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(235%2c 227%2c 219%2c 1)' offset='0.55'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+  // width: 100%;
+  // background-image: url("../../assets/images/diamond.png") ;
+  
+   background-repeat: no-repeat;
    display: flex;
-   justify-content: center;
+    justify-content: center;
    align-items: center;
   
    
 .heading {
  
-  background: aqua;
+  background: $color-secondary;
+  color: $color-green;
   font-family: $font-secondary;
   font-size: 2rem;
-  width: 20rem;
-  height: 20rem;
+  width: 25rem;
+  height: 25rem;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 10%;
   box-shadow: 0px 2px 5px rgba(0,0,0,.70);
 
+  span {
+    font-size: 10vh;
+    color: $color-primary
+    
+
+  }
   
  
   

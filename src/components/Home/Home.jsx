@@ -9,7 +9,7 @@ const Home = () => {
     <div class="background">
     
     
-    <h1 className="heading">Welcome to the Real Housewives Catalogue</h1>
+    <h1 className="heading"><span >Welcome</span> to the <span>Real Housewives</span> Catalogue</h1>
     
     </div>
   )

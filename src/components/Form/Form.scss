@@ -1,4 +1,4 @@
-$blue: rgb(40, 135, 199);
+
 @use '../../styles/variables' as *;
 
 
@@ -22,7 +22,7 @@ $blue: rgb(40, 135, 199);
     font-family: $font-primary;
     font-size: 1.35em;
     display: block;
-    background: #e66465;
+    background: $color-green;
     width: 100%;
     text-transform: uppercase;
     padding: .75em 1em .75em 1.5em;
@@ -48,17 +48,17 @@ $blue: rgb(40, 135, 199);
   
   .btn {
     display: inline-block;
-    background: $blue;
-    border: 1px solid darken($blue, 5%);
+    background: $color-black;
+    border: 1px solid darken($color-green, 5%);
     padding: .5em 2em;
     color: white;
     margin-right: .5em;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
     &:hover {
-      background: lighten($blue, 5%);
+      background: lighten($color-green, 5%);
     }
     &:active {
-      background: $blue; 
+      background: $color-green; 
       box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
     }
     &:focus {

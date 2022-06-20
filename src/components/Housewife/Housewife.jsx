@@ -11,9 +11,6 @@ const Housewife = (props) => {
     famousQuote,
     housewifeId
 
-
-
-
   } = props.housewife;
 
   const handleDelete = () => {

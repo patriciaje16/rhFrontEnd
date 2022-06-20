@@ -1,15 +1,16 @@
 @use '../../styles/variables' as *;
-$blue-two: rgb(40, 135, 199);
+
 
 .housewife {
   width: 90%;
+  font-family: $font-primary;
   margin: 20px auto;
   padding: 10px;
-  background-color: #e66465;
-  color: white;
+  background-color: $color-secondary;
+  color: $color-brown;
   border-radius: 5px;
   text-align: center;
-  box-shadow: 0px 2px 5px rgba(0,0,0,.25);
+  box-shadow: 0px 2px 5px rgba(141, 129, 129, 0.25);
 
   h3 {
     font-size: 32px;
@@ -21,17 +22,17 @@ $blue-two: rgb(40, 135, 199);
     font-weight: lighter;
   }
   .btn {
-    background: $blue-two;
-    border: 1px solid darken($blue-two, 5%);
+    background: $color-green;
+    border: 1px solid darken($color-green, 5%);
     padding: .5em 2em;
     margin-top: 1rem;
     color: white;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
     &:hover {
-      background: lighten($blue-two, 5%);
+      background: lighten($color-green, 5%);
     }
     &:active {
-      background: $blue-two; 
+      background: $color-green; 
       box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
     }
     &:focus {

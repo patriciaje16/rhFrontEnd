@@ -21,10 +21,10 @@
     font-size: 12px;
     font-weight: lighter;
   }
-  .btn {
+  .btn__delete {
     background: $color-green;
     border: 1px solid darken($color-green, 5%);
-    padding: .5em 2em;
+    padding: .4em 1em;
     margin-top: 1rem;
     color: white;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
@@ -40,4 +40,27 @@
     }
 
   }
+  .btn__update {
+    background: $color-green;
+    border: 1px solid darken($color-green, 5%);
+    padding: .4em 1em;
+    margin-top: 1rem;
+    
+    color: white;
+    box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
+    &:hover {
+      background: lighten($color-green, 5%);
+    }
+    &:active {
+      background: $color-green; 
+      box-shadow: inset 0px 1px 1px fadeout(black, 90%); 
+    }
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+
+
 }

@@ -1,13 +1,10 @@
 import "./Housewife.scss";
-
 import React from 'react'
 import { useState } from "react";
 import UpdateHousewife from "../UpdateHousewife/UpdateHousewife";
 
 const Housewife = (props) => {
   const [showUpdateBox, setShowUpdateBox] = useState(false)
-
-
 
   const {
     name,
@@ -45,7 +42,7 @@ const Housewife = (props) => {
     <div className="housewife">
       {showUpdateBox && <UpdateHousewife toggleUpdateBox={toggleUpdateBox} name={name}
         placeOfResidence={placeOfResidence} seasonsPresent={seasonsPresent}
-        currentRelationshipStatus={currentRelationshipStatus} famousQuote={famousQuote} />}
+        currentRelationshipStatus={currentRelationshipStatus} famousQuote={famousQuote} housewifeId={housewifeId} />}
       <h3 className="housewife__name">{name}</h3>
       <p className="housewife__country">Country of residence:         {placeOfResidence} </p>
       <p className="housewife__season" >Seasons appeared: {seasonsPresent}</p>

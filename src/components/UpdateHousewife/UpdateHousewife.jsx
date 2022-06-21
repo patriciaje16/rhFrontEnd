@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./UpdateHousewife.scss";
-
+import blackCross from "../../assets/images/black-cross.png"
 
 const UpdateHousewife = ({ housewifeId, name, placeOfResidence, seasonsPresent, currentRelationshipStatus, famousQuote, toggleUpdateBox }) => {
 
@@ -13,7 +13,7 @@ const UpdateHousewife = ({ housewifeId, name, placeOfResidence, seasonsPresent, 
 
   })
 
-  const handleUpdate = (e) => {
+  const handleUpdate = (e) =>{
     e.preventDefault()
     fetch('https://rhbackend-wxudo37tma-nw.a.run.app/housewife/update/' + housewifeId, {
       method: 'PUT',
@@ -25,21 +25,22 @@ const UpdateHousewife = ({ housewifeId, name, placeOfResidence, seasonsPresent, 
       .then((response) => response.json())
       .then((json => console.log(json)))
       .catch(err => console.log(err))
-    e.target.reset();
+      console.log('updated');
+       
   }
 
-  
 
   return (
     <div className="update__housewife-background">
       <div className="update__housewife">
         <form onSubmit={handleUpdate}>
+        <img src={blackCross} alt="Close menu" className="cross" onClick={toggleUpdateBox}/>
           <input type="text" defaultValue={name} onInput={(e) => setHousewife({ ...housewife, name: e.target.value })} />
           <input type="text" defaultValue={placeOfResidence} onInput={(e) => setHousewife({ ...housewife, placeOfResidence: e.target.value })} />
           <input type="text" defaultValue={seasonsPresent} onInput={(e) => setHousewife({ ...housewife, seasonsPresent: e.target.value })} />
           <input type="text" defaultValue={currentRelationshipStatus} onInput={(e) => setHousewife({ ...housewife, currentRelationshipStatus: e.target.value })} />
           <input type="text" defaultValue={famousQuote} onInput={(e) => setHousewife({ ...housewife, famousQuote: e.target.value })} />
-          <button type="submit" className="update__button" onClick={toggleUpdateBox}>Update</button>
+          <button type="submit" className="update__button">Update</button>
         </form>
       </div>
     </div>

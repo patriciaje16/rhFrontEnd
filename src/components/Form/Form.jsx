@@ -32,7 +32,7 @@ const handleSubmit = (e) => {
   return (
     <div className="background">
     <div className="form-container">
-      <h2>Add To The RealHousewives List</h2>
+      <h2>Add To The Real Housewives List</h2>
       <form onSubmit = {handleSubmit}>
         <input type="text" placeholder="Real housewife name" onInput={(e) => setHousewife({ ...housewife, name: e.target.value})}/>
         <input type="text" placeholder="Place of residence"onInput={(e) => setHousewife({ ...housewife, placeOfResidence: e.target.value})}/>

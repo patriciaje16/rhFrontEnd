@@ -1,46 +1,39 @@
-@use '../../styles/variables' as *;
-
+@use '../../styles/variables'as *;
 
 .background {
-   height: 100vh;
+  height: 100vh;
   padding: 0;
   margin: 0;
   background-color: $color-primary;
   background-size: 53px 53px;
-  background-image: radial-gradient(
-      transparent 28px,
+  background-image: radial-gradient(transparent 28px,
       #ffffff 28px,
       #ffffff 32px,
       transparent 32px);
-   display: flex;
-    justify-content: center;
-   align-items: center;
-  
-.heading {
- 
-  background: $color-secondary;
-  color: $color-green;
-  font-family: $font-secondary;
-  font-size: 2rem;
-  width: 25rem;
-  height: 25rem;
-  text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 10%;
-  box-shadow: 0px 2px 5px rgba(0,0,0,.70);
 
-  span {
-    font-size: 10vh;
-    color: $color-primary
-    
+  .heading {
+    background: $color-secondary;
+    color: $color-green;
+    font-family: $font-secondary;
+    font-size: 2rem;
+    width: 25rem;
+    height: 25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .70);
+
+    span {
+      font-size: 10vh;
+      color: $color-primary
+    }
 
   }
-  
-}
 
 }
-
-

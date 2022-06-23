@@ -17,7 +17,6 @@ const Housewife = (props) => {
   } = props.housewife;
 
   const handleDelete = () => {
-    console.log("it works")
     fetch(
       'https://rhbackend-wxudo37tma-nw.a.run.app/housewife/' + housewifeId,
       {
@@ -31,6 +30,7 @@ const Housewife = (props) => {
       .then((json) => console.log(json))
       .catch((err) => console.log(err));
     console.log('deleted');
+    
   };
 
   const toggleUpdateBox = () => {

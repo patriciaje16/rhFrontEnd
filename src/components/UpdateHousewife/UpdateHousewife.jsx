@@ -15,7 +15,8 @@ const UpdateHousewife = ({ housewifeId, name, placeOfResidence, seasonsPresent, 
 
   const handleUpdate = (e) =>{
     e.preventDefault()
-    fetch('https://rhbackend-wxudo37tma-nw.a.run.app/housewife/update/' + housewifeId, {
+    fetch('https://rhbackend-wxudo37tma-nw.a.run.app/housewife/update/' + housewifeId, 
+    {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
@@ -25,8 +26,7 @@ const UpdateHousewife = ({ housewifeId, name, placeOfResidence, seasonsPresent, 
       .then((response) => response.json())
       .then((json => console.log(json)))
       .catch(err => console.log(err))
-      console.log('updated');
-       
+      console.log("updated")
   }
 
 
@@ -34,13 +34,13 @@ const UpdateHousewife = ({ housewifeId, name, placeOfResidence, seasonsPresent, 
     <div className="update__housewife-background">
       <div className="update__housewife">
         <form onSubmit={handleUpdate}>
-        <img src={blackCross} alt="Close menu" className="cross" onClick={toggleUpdateBox}/>
+          <img src={blackCross} alt="Close menu" className="cross" onClick={toggleUpdateBox}/>
           <input type="text" defaultValue={name} onInput={(e) => setHousewife({ ...housewife, name: e.target.value })} />
           <input type="text" defaultValue={placeOfResidence} onInput={(e) => setHousewife({ ...housewife, placeOfResidence: e.target.value })} />
           <input type="text" defaultValue={seasonsPresent} onInput={(e) => setHousewife({ ...housewife, seasonsPresent: e.target.value })} />
           <input type="text" defaultValue={currentRelationshipStatus} onInput={(e) => setHousewife({ ...housewife, currentRelationshipStatus: e.target.value })} />
           <input type="text" defaultValue={famousQuote} onInput={(e) => setHousewife({ ...housewife, famousQuote: e.target.value })} />
-          <button type="submit" className="update__button">Update</button>
+          <button type="submit" className="update__button">Update</button> 
         </form>
       </div>
     </div>

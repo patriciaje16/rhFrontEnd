@@ -48,8 +48,7 @@ const Housewife = (props) => {
       <p className="housewife__season" >Seasons appeared: {seasonsPresent}</p>
       <p className="housewife__relationship">Current relationship status: {currentRelationshipStatus}</p>
       <p className="housewife__quote">Famous quote(s): {famousQuote}</p>
-      <button type="button" className="btn__delete" onClick={handleDelete}>Delete</button>
-      <button type="button" className="btn__update" onClick={toggleUpdateBox}>Update</button>
+      <button type="button" className="btn__update" onClick={toggleUpdateBox}>Update</button><button type="button" className="btn__delete" onClick={handleDelete}>Delete</button>
 
     </div>
   )

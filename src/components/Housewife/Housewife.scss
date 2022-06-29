@@ -24,8 +24,9 @@
   .btn__delete {
     background: $color-green;
     border: 1px solid darken($color-green, 5%);
-    padding: .4em 1em;
+    padding: .32em 1em;
     margin-top: 1rem;
+    margin-left: 7px;
     color: white;
     box-shadow: inset 0px 1px 0px fadeout(white, 80%); 
     &:hover {
@@ -41,8 +42,8 @@
 
   }
   .btn__update {
-    background: $color-green;
-    border: 1px solid darken($color-green, 5%);
+    background: rgba(255, 123, 0, 0.425);
+    border: 1px solid darken($color-secondary, 5%);
     padding: .4em 1em;
     margin-top: 1rem;
     

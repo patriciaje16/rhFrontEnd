@@ -1,7 +1,6 @@
 import "./Form.scss";
 import { useState } from "react";
 
-
 const Form = () => {
   const [housewife, setHousewife] = useState({
     name: "",
